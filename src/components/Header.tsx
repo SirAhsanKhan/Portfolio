@@ -14,7 +14,8 @@ import {
 <header className="bg-gradient-to-r from-[#2c2e32] to-[#1f2937] flex justify-around items-center h-24 px-20">
 
     <div className="flex "> 
-        <Image 
+        <Image
+          
         src="/logo.png"
          alt="Logo" 
          className="h-24 w-32 shadow-lg bg-transparent " />
