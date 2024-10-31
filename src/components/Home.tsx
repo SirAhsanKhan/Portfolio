@@ -2,13 +2,13 @@
 import React from "react";
 import Typewriter from "@/components/Typewriter"; // Import the Typewriter component
 import FadeIn from "@/components/FadeIn"; // Import FadeIn component
-
+import Image from "next/image"
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-[#1a2335] to-[#060338] h-screen">
       <FadeIn> {/* Wrap the hero section with FadeIn component */}
         <div className="flex flex-col md:flex-row items-center justify-around pt-28 px-5 md:px-20">
-          <img
+          <Image
             src="/ahsan.png"
             alt="pf"
             className="h-48 w-48 md:h-72 md:w-72 rounded-full shadow-lg bg-transparent mb-5 md:mb-0"
@@ -16,11 +16,11 @@ export default function Home() {
           
           <div className="text-center md:text-right md:max-w-md">
             <h1 className="text-3xl md:text-4xl text-[#fbbf24] font-bold">
-              Hey there, I'm Ahsan
+              Hey there, {"I'm Ahsan"}
             </h1>
 
             <h2 className="text-[#fbbf24] font-bold text-2xl md:text-3xl mt-5">
-              I'm a <Typewriter /> {/* Dynamically typed words */}
+             {"I'm a"} <Typewriter /> {/* Dynamically typed words */}
             </h2>
 
             <h3 className="text-[#fbbf24] font-bold text-lg md:text-xl mt-5">

@@ -5,6 +5,7 @@ import Typewriter from "@/components/Typewriter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
+import Image from "next/image"
 
 const technologies = [
   "TypeScript",
@@ -32,19 +33,19 @@ const About: React.FC = () => {
          
         
         <div className="flex flex-col items-center mb-10">
-          <img
+          <Image
             src="/ahsan.png"
             alt="Ahsan"
             className="h-48 w-48 md:h-72 md:w-72 rounded-full shadow-lg bg-transparent mb-5"
           />
           <h1 className="text-3xl md:text-4xl text-[#fbbf24] font-bold mb-2">
-            Hey, I'm Ahsan
+            Hey, {"I'm Ahsan"}
           </h1>
           <h2 className="text-xl md:text-2xl text-[#fbbf24] font-semibold mb-6">
-            I'm <Typewriter />
+            {"I'm"} <Typewriter />
           </h2>
           <p className="text-lg md:text-xl text-[#e5e7eb] max-w-2xl mb-8">
-            I'm a 17-year-old developer, currently learning at GIAIC. I completed Q1 with a 73 percentile. 
+            {"I'm"} a 17-year-old developer, currently learning at GIAIC. I completed Q1 with a 73 percentile. 
             Always curious, adaptable, and passionate about technology, I love exploring how things work.
           </p>
         </div>
@@ -122,8 +123,8 @@ const About: React.FC = () => {
         <div className="mb-10 w-full max-w-2xl">
           <h3 className="text-2xl text-[#fbbf24] font-bold mb-4 mt-11">Testimonials</h3>
           <blockquote className="text-lg md:text-xl text-[#e5e7eb] italic">
-            "Ahsan is a dedicated learner and a talented developer. His passion for technology is inspiring!" 
-            - A Mentor
+            {"Ahsan is a dedicated learner and a talented developer. His passion for technology is inspiring! "}
+            {"- A Mentor"}
           </blockquote>
         </div>
 

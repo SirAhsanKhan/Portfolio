@@ -2,35 +2,37 @@ import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
 const Typewriter = () => {
-  const el = useRef(null);
-  const typedInstance = useRef(null); // To hold the typed.js instance
+  const el = useRef<HTMLSpanElement | null>(null); // Define the type for el
+  const typedInstance = useRef<Typed | null>(null); // Define the type for typedInstance
 
   useEffect(() => {
-    typedInstance.current = new Typed(el.current, {
-      strings: [
-        "Full-stack developer.",
-        "UI/UX Designer.",
-        "Your one-stop solution.",
-      ], // Dynamic text
-      typeSpeed: 50,
-      backSpeed: 25,
-      loop: true,
-    });
+    if (el.current) {
+      typedInstance.current = new Typed(el.current, {
+        strings: [
+          "Full-stack developer.",
+          "UI/UX Designer.",
+          "Your one-stop solution.",
+        ], // Dynamic text
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop: true,
+      });
+    }
 
     // Cleanup on component unmount
     return () => {
-      typedInstance.current.destroy();
+      typedInstance.current?.destroy(); // Optional chaining to safely call destroy
     };
   }, []);
 
   // Function to stop animation on hover
   const handleMouseEnter = () => {
-    typedInstance.current.stop();
+    typedInstance.current?.stop(); // Optional chaining
   };
 
   // Function to resume animation when hover ends
   const handleMouseLeave = () => {
-    typedInstance.current.start();
+    typedInstance.current?.start(); // Optional chaining
   };
 
   return (
