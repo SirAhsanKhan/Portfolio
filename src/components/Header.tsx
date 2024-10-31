@@ -30,7 +30,7 @@ import {
     </div>
     <Sheet>
 <SheetTrigger className="md:hidden">
-        <Menu color="#ffffff" />
+        <Menu className="bg-white" />
         </SheetTrigger>
   <SheetContent className="flex flex-col space-y-4">
     <Link href="/home" className=" text-[#141415] font-bold hover:text-[#fbbf24] text-xl ">Home</Link>
