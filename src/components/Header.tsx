@@ -13,14 +13,12 @@ import {
     return (
 <header className="bg-gradient-to-r from-[#2c2e32] to-[#1f2937] flex justify-around items-center h-24 px-20">
 
-    <div className="flex "> 
+    <a href ="/"  className="flex "> 
         <Image
-          
         src="/logo.png"
          alt="Logo" 
          className="h-24 w-32 shadow-lg bg-transparent " />
-
-    </div>
+    </a>
   
     <div className="gap-10 mb-6 pt-3 flex">
 

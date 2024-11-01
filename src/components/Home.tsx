@@ -9,7 +9,6 @@ export default function Home() {
       <FadeIn> {/* Wrap the hero section with FadeIn component */}
         <div className="flex flex-col md:flex-row items-center justify-around pt-28 px-5 md:px-20">
           <Image
-          
             src="/ahsan.png"
             alt="pf"
             className="h-48 w-48 md:h-72 md:w-72 rounded-full shadow-lg bg-transparent mb-5 md:mb-0"
