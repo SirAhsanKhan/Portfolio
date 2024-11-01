@@ -12,10 +12,10 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, description, link, isLink, technologies, backgroundImage }) => {
   return (
     <div
-      className="relative overflow-hidden rounded-lg w-full  md:w-[calc(100%-1rem)] lg:w-[calc(100%-1rem)] h-80 bg-cover bg-center transform transition-transform duration-300 hover:scale-105"
+      className="relative overflow-hidden rounded-lg w-full md:w-[calc(100%-1rem)] lg:w-[calc(100%-1rem)] h-80 bg-cover bg-center transform transition-transform duration-300 hover:scale-105"
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: "#1a1a1a" // Fallback color
+        backgroundColor: "#1a1a1a", // Fallback color
       }}
     >
       <div className="absolute inset-0 bg-black opacity-60 hover:opacity-70 transition-opacity duration-300"></div>
@@ -36,8 +36,13 @@ const Card: React.FC<CardProps> = ({ title, description, link, isLink, technolog
             ))}
           </div>
           <div className="text-center">
-            <p className="text-[#fbbf24] font-bold">{isLink ? "View Project" : "Run Command"}</p>
-            <a  href={link} className="text-[#e5e7eb]">visit</a>
+            {isLink ? (
+              <a href={link} target="_blank" rel="noopener noreferrer" className="text-[#fbbf24] font-bold">
+                Visit Project
+              </a>
+            ) : (
+              <p className="text-[#fbbf24] font-bold">Run Command: <span className="text-[#e5e7eb]">{link}</span></p>
+            )}
           </div>
         </div>
       </div>
