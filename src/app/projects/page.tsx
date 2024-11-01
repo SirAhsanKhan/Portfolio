@@ -11,6 +11,7 @@ const projects = [
     isLink: false,
     technologies: ["TypeScript", "Node.Js", "Javascript"],
     backgroundImage: "/atm.webp"
+  
   },
   {
     title: "CLI-Calculator",

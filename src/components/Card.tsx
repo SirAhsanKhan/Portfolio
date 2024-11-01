@@ -37,7 +37,7 @@ const Card: React.FC<CardProps> = ({ title, description, link, isLink, technolog
           </div>
           <div className="text-center">
             <p className="text-[#fbbf24] font-bold">{isLink ? "View Project" : "Run Command"}</p>
-            <a className="text-[#e5e7eb]">{link}</a>
+            <a  href={link} className="text-[#e5e7eb]">visit</a>
           </div>
         </div>
       </div>
