@@ -60,9 +60,9 @@ const Contact = () => {
 
                 {/* Quick Contact Links */}
                 <div className="flex gap-4 mb-6">
-                    <p className="flex items-center hover:text-[#fbbf24]">
+                    <a  href="tel:03472824847" className="flex items-center hover:text-[#fbbf24]">
                         <Phone color="#f5f5f5" className="mr-2 " /> 03472824847
-                    </p>
+                    </a>
                     <p className="flex items-center hover:text-[#fbbf24]">
                         <FaEnvelope className="mr-2" />{" "}
                         <a href="mailto:afzalahsankhan283@gmail.com" className="text-[#fbbf24]">
