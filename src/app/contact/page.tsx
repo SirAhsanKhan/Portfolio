@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert"; // Adjust this import based on your actual library
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert"; 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa"; // Import icon
@@ -58,7 +58,7 @@ const Contact = () => {
 
                 {/* Quick Contact Links */}
                 <div className="quick-contact">
-                    <a  href ="tel:03472824847" className="flex items-center hover:text-[#fbbf24]">
+                    <a href="tel:03472824847" className="flex items-center hover:text-[#fbbf24]">
                         <Phone color="#f5f5f5" className="mr-2" /> 03472824847
                     </a>
                     <p className="flex items-center hover:text-[#fbbf24]">
@@ -79,10 +79,10 @@ const Contact = () => {
 
                 {/* Alert */}
                 {showAlert && (
-                    <div className="alert">
+                    <Alert>
                         <AlertTitle>Thank you for reaching us!</AlertTitle>
                         <AlertDescription>You will be served shortly.</AlertDescription>
-                    </div>
+                    </Alert>
                 )}
 
                 {/* Contact Form */}
@@ -139,7 +139,6 @@ const Contact = () => {
                     </button>
                 </form>
             </div>
-
             <Footer />
         </main>
     );
