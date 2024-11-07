@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,8 +11,7 @@ const projects = [
     link: "npx mr0ahs4n-ka-atm",
     isLink: false,
     technologies: ["TypeScript", "Node.Js", "Javascript"],
-    backgroundImage: "/atm.webp"
-  
+    backgroundImage: "/atm.webp",
   },
   {
     title: "CLI-Calculator",
@@ -19,7 +19,7 @@ const projects = [
     link: "npx mr0ahs4n-simple-calculator",
     isLink: false,
     technologies: ["TypeScript", "Node.Js", "Javascript"],
-    backgroundImage: "/calculator.webp"
+    backgroundImage: "/calculator.webp",
   },
   {
     title: "CLI-WordCounter",
@@ -27,7 +27,7 @@ const projects = [
     link: "npx mr0ahs4n-word_counter",
     isLink: false,
     technologies: ["TypeScript", "Node.Js", "Javascript"],
-    backgroundImage: "/word.webp"
+    backgroundImage: "/word.webp",
   },
   {
     title: "CLI-Number Guessing Game",
@@ -35,7 +35,7 @@ const projects = [
     link: "npx mr0ahs4n-cli-number-guessing-game",
     isLink: false,
     technologies: ["TypeScript", "Node.Js", "Javascript"],
-    backgroundImage: "/number.webp"
+    backgroundImage: "/number.webp",
   },
   {
     title: "Weather-Widget-App",
@@ -43,7 +43,7 @@ const projects = [
     link: "https://weatherwizard1.vercel.app/",
     isLink: true,
     technologies: ["HTML", "CSS", "Javascript"],
-    backgroundImage: "/weather.webp"
+    backgroundImage: "/weather.webp",
   },
   {
     title: "SIP-investment-calculator",
@@ -51,7 +51,7 @@ const projects = [
     link: "https://investment-calculator-sip.vercel.app/",
     isLink: true,
     technologies: ["HTML", "CSS", "Javascript"],
-    backgroundImage: "/investment.webp"
+    backgroundImage: "/investment.webp",
   },
   {
     title: "Static-Resume",
@@ -59,7 +59,7 @@ const projects = [
     link: "https://static-resume-ahsan.vercel.app/",
     isLink: true,
     technologies: ["HTML", "CSS"],
-    backgroundImage: "/resume.webp"
+    backgroundImage: "/resume.webp",
   },
   {
     title: "Dynamic-Resume-Builder",
@@ -67,7 +67,7 @@ const projects = [
     link: "https://dynamic-resume-ahsan.vercel.app/",
     isLink: true,
     technologies: ["HTML", "CSS"],
-    backgroundImage: "/Dresume.webp"
+    backgroundImage: "/Dresume.webp",
   },
 ];
 
@@ -75,14 +75,14 @@ const Projects: React.FC = () => {
   return (
     <main>
       <Header />
-      <section className="bg-gradient-to-b from-[#1a2335] to-[#060338] min-h-screen py-16 px-5">
-        <h2 className="text-3xl font-bold text-[#fbbf24] text-center mb-10">My Projects</h2>
-        <div className="flex flex-wrap gap-5 justify-center">
+      <section className="projects-section">
+        <h2 className="projects-heading">My Projects</h2>
+        <div className="projects-grid">
           {projects.map((project, index) => (
             <div
               key={project.title}
-              style={{ animationDelay: `${index * 0.3}s` }}  // Stagger animation delay for each card
-              className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] opacity-0 animate-fadeIn"
+              style={{ animationDelay: `${index * 0.3}s` }}
+              className="project-card"
             >
               <Card {...project} />
             </div>
